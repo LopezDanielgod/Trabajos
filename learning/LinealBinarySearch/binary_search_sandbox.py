@@ -13,4 +13,4 @@ def binary_search(sorted_list, target):
         else:
             left_pointer = mid_idx + 1
 
-    return "Valor no encontrado"  # Mensaje corregido
+    return "Valor no encontrado" 

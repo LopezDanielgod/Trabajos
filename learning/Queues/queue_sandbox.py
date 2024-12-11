@@ -35,18 +35,17 @@ class Queue:
             logging.warning("¡Esta cola está totalmente vacía!")  
             return None
         
-        item_to_remove = self.head  # Inicializa la variable con el nodo actual
-        logging.info(f"¡Eliminando {item_to_remove.get_value()} de la cola!")  # Imprime el valor a eliminar
+        item_to_remove = self.head  
+        logging.info(f"¡Eliminando {item_to_remove.get_value()} de la cola!")  
         
-        if self.size == 1:  # Si solo hay un nodo
+        if self.size == 1:  
             self.head = None
             self.tail = None
         else:
-            self.head = self.head.get_next_node()  # Avanza la cabeza al siguiente nodo
+            self.head = self.head.get_next_node()  
         
-        self.size -= 1  # Reduce el tamaño de la cola
-        return item_to_remove.get_value()  # Devuelve el valor del nodo eliminado
-
+        self.size -= 1  
+        return item_to_remove.get_value()  
     def is_empty(self):
         """Devuelve True si la cola está vacía."""
         return self.size == 0

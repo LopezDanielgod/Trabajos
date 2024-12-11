@@ -11,10 +11,3 @@ class Node:
         if not isinstance(next_node, (Node, dict)) and next_node is not None:
             raise TypeError("next_node debe ser del tipo Node, dict, o None")
         self.next_node = next_node
-
-  
-        
-        
-        
-
-            

@@ -35,7 +35,7 @@ class DoublyLinkedList:
             self.head_node.prev_node = None
         else:
             self.tail_node = None  
-        return removed_node  # Devolver el nodo eliminado
+        return removed_node  
 
     def remove_tail(self):
         if self.tail_node is None:
@@ -47,7 +47,7 @@ class DoublyLinkedList:
             self.tail_node.next_node = None
         else:
             self.head_node = None 
-        return removed_node  # Devolver el nodo eliminado
+        return removed_node  
 
     def remove_by_value(self, value_to_remove):
         node_to_remove = None
@@ -68,7 +68,7 @@ class DoublyLinkedList:
                 self.head_node.prev_node = None
             else:
                 self.tail_node = None
-            return node_to_remove  # Devolver el nodo eliminado
+            return node_to_remove  
         
         if node_to_remove == self.tail_node:
             self.tail_node = node_to_remove.prev_node
@@ -76,7 +76,7 @@ class DoublyLinkedList:
                 self.tail_node.next_node = None
             else:
                 self.head_node = None
-            return node_to_remove  # Devolver el nodo eliminado
+            return node_to_remove  
         
         prev_node = node_to_remove.prev_node
         next_node = node_to_remove.next_node
@@ -84,4 +84,4 @@ class DoublyLinkedList:
         if next_node is not None:
             next_node.prev_node = prev_node
         
-        return node_to_remove  # Devolver el nodo eliminado
+        return node_to_remove  
